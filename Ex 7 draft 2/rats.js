@@ -1,5 +1,5 @@
 
-this is heavaly refrenced from https://www.youtube.com/watch?v=118sDpLOClw&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r p5.js tutorial - 8.3 What is JSON (JavaScript Object Notation)? (Part 2) with Daniel Shiffman i am using this as a basis to get information to later visualise the data.
+//this is heavaly refrenced from https://www.youtube.com/watch?v=118sDpLOClw&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r p5.js tutorial - 8.3 What is JSON (JavaScript Object Notation)? (Part 2) with Daniel Shiffman i am using this as a basis to get information to later visualise the data.
  var data;
 function preload(){
 	data = loadJSON(birds.json);// loads in json file birds 

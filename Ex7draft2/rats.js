@@ -37,31 +37,34 @@ function setup() {
 
 // this was 
 var spaceData;
+
 function setup(){
-	createCanvas(200, 200);
-	loadJSON("http://api.open-notify.org/astros.json", gotData, 'jsonp');//load people in space json html 
+  createCanvas(200, 200);
+	//Img = loadImage("data/200_s.gif");
+	//randomW = random(width);//position of space people
+	//randomH = random(height);
+   loadJSON("http://api.open-notify.org/astros.json", gotData, 'jsonp');//load people in space json html 
 	
 }
 function gotData(data) {
-	randomW = random(width);//position of space people
-	randomH = random(height);
+	
 	spaceData = data;
 	
 	function draw() {
-		
-		background(0);
+		//image(img, 0, 0);
 		if(spaceData) {//need time to relay data from html so you cheack if it is true or false (if the datahas arrived)
 			randomseed(4);// heeps the random numbers constant (no crazy  circles flying all over the place
 			for(var i = 0; i < spaceData.number; i++){
 				fill(255);
-				ellipse(randomW, randomH, 16, 16);//draw spacemen
+				ellipse(random(width), random(height), 16, 16);//draw spacemen
 				
-				for ( var j = 0; j < spaceData.people.length; j++){
+				/*for ( var j = 0; j < spaceData.people.length; j++){
 					
-				info = 	people[j];
+				info = 	spaceData.people[j];
 				
 					textSize(20);
 					text(info, randomW+10, randomH);//text is next to ellipse of spacemen//
+					*/
 				}
 					
 					
@@ -70,7 +73,8 @@ function gotData(data) {
 			
 			
 			
-		}
+		
 		}
 	}
 }
+
